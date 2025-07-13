@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Calculator</h1>
+      <h2 class="subheading">
+  <span class="heart">❤</span> Made with love by <span class="name">Prabhakar Chaubey</span>
+</h2>
+      <div class="calculator">
+        <input type="text" id="inputBox" placeholder="0" readonly />
+        <div class="buttons">
+          <button class="button operator">AC</button>
+          <button class="button operator">DEL</button>
+          <button class="button operator">%</button>
+          <button class="button operator">/</button>
+
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button operator">*</button>
+
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button operator">-</button>
+
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button operator">+</button>
+
+          <button class="button">00</button>
+          <button class="button">0</button>
+          <button class="button">.</button>
+          <button class="button equalBtn">=</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+       gsap.from(".heading", {
+        duration: 1.2,
+        y: -50,
+        opacity: 0,
+        ease: "bounce",
+      });
+
+      gsap.from(".calculator", {
+        duration: 1,
+        scale: 0.6,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 0.3,
+      });
+      gsap.from(".subheading", {
+      delay: 0.8,
+      duration: 1.5,
+      y: -20,
+      opacity: 0,
+      ease: "power2.out",
+      });
+
+    </script>
+  </body>
+</html>
